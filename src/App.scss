@@ -13,13 +13,13 @@ width: 100%;
     &::-webkit-scrollbar{
       display: none;
     }
-  }
+  
 
-  *{
+  >*{
    width: 100vw; 
    height: calc(100vh - 70px);
    scroll-snap-align:start ;
   }
 }
-
+}
 
