@@ -6,6 +6,7 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import Testimonials from './Components/Testimonials/Testimonials';
 import Topbar from './Components/Topbar/Topbar';
 import Works from './Components/Works/Works';
+import Menu from './Components/Menu/Menu';
  
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
 <Topbar hamburgerExpand ={hamburgerExpand} setHamburgerExpand={setHamburgerExpand}  />
+    <Menu hamburgerExpand ={hamburgerExpand} setHamburgerExpand={setHamburgerExpand}/>
     <div className="sections">
 <Intro/>
 <Portfolio/>

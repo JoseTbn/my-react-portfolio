@@ -1,3 +1,72 @@
-.intro{
-    background-color: lightskyblue;
+@import "../../global.scss";
+
+.intro {
+  background-color: black;
+  color: white;
+  display: flex;
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 700px;
+      height: 700px;
+      background-color: $mainColor;
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+    }
+
+    img {
+      height: 155%;
+      width: 100%;
+      border-radius: 30%;
+    }
+  }
+
+  .right {
+    flex: 0.5;
+    position: relative;
+    .wrapper {
+      widows: 100px;
+      padding-left: 50px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 40px;
+        margin: 10px, 0;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 20px;
+
+        span {
+          font-size: inherit;
+          color: $mainColor;
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      color: white;
+      width: 100%;
+      animation: arrowBlink 2s infinite;
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
 }
