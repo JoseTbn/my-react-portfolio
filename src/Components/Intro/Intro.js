@@ -7,7 +7,12 @@ export default function Intro() {
   const textRef = useRef();
 
   useEffect(() => {
-    console.log(textRef);
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 60,
+      strings: ["Javascritp", "React", "NodeJS", "MongoDB", "Express"],
+    });
   }, []); // empty array for useEffect to work one time
   return (
     <div className="intro" id="intro">
@@ -22,7 +27,7 @@ export default function Intro() {
           <h2>Becode</h2>
           <h1>Full Satck Dev Trainee</h1>
           <h3>
-            Intern <span ref={textRef}>Intership looking</span>{" "}
+            Intern <span ref={textRef}></span>{" "}
           </h3>
         </div>
 
