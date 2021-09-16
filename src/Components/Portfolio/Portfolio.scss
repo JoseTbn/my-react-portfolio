@@ -19,30 +19,30 @@
     overflow: hidden;
     display: flex;
 
-    li {
-      font-size: 14px;
-      margin-right: 20px;
-      padding: 7px;
+    // li {
+    //   font-size: 14px;
+    //   margin-right: 20px;
+    //   padding: 7px;
 
-      &:active {
-        background-color: $mainColor;
-        color: white;
-        border-radius: 5%;
-      }
-      &:hover {
-        background-color: $mainColor;
-        color: white;
-        border-radius: 5%;
-        cursor: pointer;
-      }
-    }
+    //   &:active {
+    //     background-color: $mainColor;
+    //     color: white;
+    //     border-radius: 5%;
+    //   }
+    //   &:hover {
+    //     background-color: $mainColor;
+    //     color: white;
+    //     border-radius: 5%;
+    //     cursor: pointer;
+    //   }
+    // }
   }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 80%;
 
     .item {
       display: flex;
@@ -65,7 +65,6 @@
         border-radius: 10%;
         object-fit: cover;
         z-index: 1;
-        margin: 5px 10px;
 
         &:hover {
           transform: scale(1.05);
