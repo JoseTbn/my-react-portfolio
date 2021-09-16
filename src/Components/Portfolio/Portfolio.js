@@ -21,6 +21,46 @@ export default function Portfolio() {
           />
           <h3>Dashbord App</h3>
         </div>
+        <div className="item">
+          <img
+            src="assets\img\dashbordappscreen.png"
+            alt=""
+            onClick={"https://hopeful-newton-ed3c1f.netlify.app/"}
+          />
+          <h3>Dashbord App</h3>
+        </div>
+        <div className="item">
+          <img
+            src="assets\img\dashbordappscreen.png"
+            alt=""
+            onClick={"https://hopeful-newton-ed3c1f.netlify.app/"}
+          />
+          <h3>Dashbord App</h3>
+        </div>
+        <div className="item">
+          <img
+            src="assets\img\dashbordappscreen.png"
+            alt=""
+            onClick={"https://hopeful-newton-ed3c1f.netlify.app/"}
+          />
+          <h3>Dashbord App</h3>
+        </div>
+        <div className="item">
+          <img
+            src="assets\img\dashbordappscreen.png"
+            alt=""
+            onClick={"https://hopeful-newton-ed3c1f.netlify.app/"}
+          />
+          <h3>Dashbord App</h3>
+        </div>
+        <div className="item">
+          <img
+            src="assets\img\dashbordappscreen.png"
+            alt=""
+            onClick={"https://hopeful-newton-ed3c1f.netlify.app/"}
+          />
+          <h3>Dashbord App</h3>
+        </div>
       </div>
     </div>
   );

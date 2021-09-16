@@ -27,26 +27,50 @@
       &:active {
         background-color: $mainColor;
         color: white;
+        border-radius: 5%;
+      }
+      &:hover {
+        background-color: $mainColor;
+        color: white;
+        border-radius: 5%;
+        cursor: pointer;
       }
     }
   }
 
   .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
     .item {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: center;
+      position: relative;
+
+      h3 {
+        position: absolute;
+        font-size: 20px;
+      }
 
       img {
-        height: 25%;
-        width: 25%;
+        width: fit-content;
         cursor: pointer;
         transition: transform 0.2s;
         border-radius: 10%;
+        object-fit: cover;
+        z-index: 1;
+        margin: 5px 10px;
 
         &:hover {
           transform: scale(1.05);
           border-radius: 10%;
+          opacity: 0.2;
         }
       }
     }
