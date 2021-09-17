@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import "./Topbar.scss";
 import MailIcon from "@material-ui/icons/Mail";
 import PersonIcon from "@material-ui/icons/Person";
-import { Timeline } from "gsap/gsap-core";
 import gsap from "gsap";
 
 export default function Topbar(
