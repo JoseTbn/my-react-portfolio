@@ -11,12 +11,7 @@ export default function Menu({ hamburgerExpand, setHamburgerExpand }) {
         <li onClick={() => setHamburgerExpand(false)}>
           <a href="#Portfolio">Portfolio</a>
         </li>
-        <li onClick={() => setHamburgerExpand(false)}>
-          <a href="#Works">Works</a>
-        </li>
-        <li onClick={() => setHamburgerExpand(false)}>
-          <a href="#Testimonials">Testimonials</a>
-        </li>
+      
         <li onClick={() => setHamburgerExpand(false)}>
           <a href="#contact">Contact</a>
         </li>

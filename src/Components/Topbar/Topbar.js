@@ -1,11 +1,33 @@
-import React  from "react";
+import React, {useRef, useEffect}  from "react";
 import "./Topbar.scss";
 import MailIcon from "@material-ui/icons/Mail";
 import PersonIcon from "@material-ui/icons/Person";
+import { Timeline } from "gsap/gsap-core";
+import gsap from 'gsap'
 
-export default function Topbar({hamburgerExpand , setHamburgerExpand}) {
+
+export default function Topbar({hamburgerExpand , setHamburgerExpand,},{Timeline,ease}) {
   
-  
+  let tl = new gsap.timeline()
+  let logo = useRef(null)
+  let numb = useRef(null)
+  let mail = useRef(null)
+
+  useEffect(() => {
+    tl.to(logo, 1,{
+opacity:0,
+y: '100'
+    });
+    tl.to([numb, mail],2,{
+     opacity:0,
+     y: -200,
+     stagger:{
+       amount: .4
+     },
+     ease:ease 
+    })
+  })
+
   
   
    return (
@@ -36,16 +58,16 @@ export default function Topbar({hamburgerExpand , setHamburgerExpand}) {
 <div className={"topbar " + (hamburgerExpand && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo">
+          <a href="#intro" className="logo" ref = {el => logo =el } >
             Jose Batumeni
           </a>
           <div className="itemContainer">
             <PersonIcon className="icon" />
-            <span>+44 924 12 74</span>
+            <span className="numb"  ref = {el => numb =el }>+32487076163</span>
           </div>
           <div className="itemContainer">
             <MailIcon className="icon" />
-            <span>btnjose@gmail.com</span>
+            <span className="mail"  ref = {el => mail =el }>btnjose@gmail.com</span>
           </div>
         </div>
         <div className="right">
