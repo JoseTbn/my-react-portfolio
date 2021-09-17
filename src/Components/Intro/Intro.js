@@ -27,7 +27,7 @@ export default function Intro() {
           <h2>Becode</h2>
           <h1>Full Satck Dev Trainee</h1>
           <h3>
-            Intern <span ref={textRef}></span>{" "}
+            Working on <span ref={textRef}></span>{" "}
           </h3>
         </div>
 

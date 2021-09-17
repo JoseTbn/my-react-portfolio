@@ -1,36 +1,35 @@
-import React, {useRef, useEffect}  from "react";
+import React, { useRef, useEffect } from "react";
 import "./Topbar.scss";
 import MailIcon from "@material-ui/icons/Mail";
 import PersonIcon from "@material-ui/icons/Person";
 import { Timeline } from "gsap/gsap-core";
-import gsap from 'gsap'
+import gsap from "gsap";
 
-
-export default function Topbar({hamburgerExpand , setHamburgerExpand,},{Timeline,ease}) {
-  
-  let tl = new gsap.timeline()
-  let logo = useRef(null)
-  let numb = useRef(null)
-  let mail = useRef(null)
+export default function Topbar(
+  { hamburgerExpand, setHamburgerExpand },
+  { Timeline, ease }
+) {
+  let tl = new gsap.timeline();
+  let logo = useRef(null);
+  let numb = useRef(null);
+  let mail = useRef(null);
 
   useEffect(() => {
-    tl.to(logo, 1,{
-opacity:0,
-y: '100'
+    tl.staggerFrom(logo, 0.5, {
+      opacity: 0,
+      y: 70,
     });
-    tl.to([numb, mail],2,{
-     opacity:0,
-     y: -200,
-     stagger:{
-       amount: .4
-     },
-     ease:ease 
-    })
-  })
+    tl.staggerFrom([numb, mail], 1, {
+      opacity: 0,
+      y: 70,
+      stagger: {
+        amount: 0.4,
+      },
+      ease: ease,
+    });
+  });
 
-  
-  
-   return (
+  return (
     // <div className={"topbar " + hamburgerExpand && "active"}>
     //   <div className="wrapper">
     //     <div className="left">
@@ -55,30 +54,36 @@ y: '100'
     //     </div>
     //   </div>
     // </div>
-<div className={"topbar " + (hamburgerExpand && "active")}>
+    <div className={"topbar " + (hamburgerExpand && "active")}>
       <div className="wrapper">
         <div className="left">
-          <a href="#intro" className="logo" ref = {el => logo =el } >
+          <a href="#intro" className="logo" ref={(el) => (logo = el)}>
             Jose Batumeni
           </a>
           <div className="itemContainer">
             <PersonIcon className="icon" />
-            <span className="numb"  ref = {el => numb =el }>+32487076163</span>
+            <span className="numb" ref={(el) => (numb = el)}>
+              +32487076163
+            </span>
           </div>
           <div className="itemContainer">
             <MailIcon className="icon" />
-            <span className="mail"  ref = {el => mail =el }>btnjose@gmail.com</span>
+            <span className="mail" ref={(el) => (mail = el)}>
+              btnjose@gmail.com
+            </span>
           </div>
         </div>
         <div className="right">
-          <div className="hamburger" onClick={()=>setHamburgerExpand(!hamburgerExpand)}>
+          <div
+            className="hamburger"
+            onClick={() => setHamburgerExpand(!hamburgerExpand)}
+          >
             <span className="line1"></span>
             <span className="line2"></span>
             <span className="line3"></span>
           </div>
         </div>
       </div>
-</div>
-
+    </div>
   );
 }
